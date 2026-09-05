@@ -1,0 +1,53 @@
+name: EMS3 Deep Audit
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/ems3_deep_audit.yml']
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract runtime sources
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request, pathlib, shutil, zipfile, re, hashlib
+          ids=['1u8n3CcrdQj1OFNxISl5EjzGw0idFxLDw','1e3hMX_eNG0IbbakEHbU-s5odekkbJYt0','1MT-UlN7SD2sLbasQ4-Xim_pTEHio6Mx3','1y_7n-FoDWvxJ1RnK6NH8ItgoLq2QChD0','1EoAp6mEQ18_J-vckYa_CYmd_dl6-4Bur','12wKsdJQU8L4gagNdQCc0YWLBMGLXKehd','1h6kr73s83W2Mp20F1Yd7JqsogjnCrjsI','1q5Q700wWkzI9pW3NgujU8E41QcrUD4uA','15GvcatEMG7Szd8EPmh7BvF0PCsf93IVZ','1h7P-CkKTCJefBz0SthL7iTpN0EVYq5PB','1O0ppyrl1AbQdCoRA4bgDuXNEH7zhfKuD','1AohbSE6HriemhcRRq_wckvO_XXH4x6jj','1UxmKpXWzOt8tLaWVxqZfueTsvXfG5r8a']
+          root=pathlib.Path('/tmp/deep'); root.mkdir(exist_ok=True)
+          def dl(fid,path):
+            u=f'https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t'; req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'})
+            with urllib.request.urlopen(req,timeout=180) as r, open(path,'wb') as f: shutil.copyfileobj(r,f)
+          parts=[]
+          for i,fid in enumerate(ids): p=root/f'p{i:02d}'; dl(fid,p); parts.append(p)
+          zp=root/'ems3.zip'
+          with open(zp,'wb') as o:
+            for p in parts:
+              with open(p,'rb') as f: shutil.copyfileobj(f,o)
+          out=pathlib.Path('deep_sources'); out.mkdir(exist_ok=True)
+          report=[]
+          with zipfile.ZipFile(zp) as z:
+            names=z.namelist()
+            wanted=[]
+            for n in names:
+              low=n.lower()
+              if ('immersive-v31' in low or 'home_' in low and low.endswith('.html') or low.endswith('/site.css') or low.endswith('/config.py') or low.endswith('/state_v6.py') or 'asset' in low and low.endswith('.json') or low.endswith('/projects.json') or low.endswith('/portfolio.json') or low.endswith('/routes.json')):
+                wanted.append(n)
+            report.append('MATCHES='+str(len(wanted)))
+            for n in wanted:
+              if n.endswith('/'): continue
+              b=z.read(n)
+              if len(b)>2_000_000: continue
+              safe=re.sub(r'[^A-Za-z0-9_.-]+','__',n)[-220:]
+              (out/safe).write_bytes(b)
+              report.append(f'{n} bytes={len(b)} sha={hashlib.sha256(b).hexdigest()} -> {safe}')
+          pathlib.Path('ems3_deep_audit.txt').write_text('\n'.join(report)+'\n',encoding='utf-8')
+          PY
+          git config user.name 'EMS3 Audit Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add deep_sources ems3_deep_audit.txt
+          git commit -m 'audit: extract EMS3 immersive/state sources' || true
+          git push
