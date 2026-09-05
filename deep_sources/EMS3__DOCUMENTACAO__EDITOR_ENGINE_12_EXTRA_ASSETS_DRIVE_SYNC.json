@@ -1,0 +1,34 @@
+{
+  "schema": "studioframe-editor-engine-12-extra-assets-drive-sync-v1",
+  "contract_id": "EE12-ASSET-001",
+  "synced_at": "2026-08-30",
+  "status": "PASS",
+  "root_folder_id": "1Ea_4oibE8oUY0wfYcUqRXB17ev_gaT7H",
+  "folders": {
+    "source_glb": "19WNz8LPLiDzeZty4e7GVj8f0JpkZ9Ebl",
+    "fallbacks": "1WXfnL8RtCigHgggV7pYCTY33RsETAlmZ",
+    "runtime": "1HKmw7R_bFO0t8CvkIJ3vHCFDImVgi7Ch",
+    "licenses_and_manifests": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM"
+  },
+  "files": [
+    {"name": "oryzo-crystal-cluster.glb", "id": "19Ci88GVGvGU5Qb4TRcFwddad_-KAprL_", "parent_id": "19WNz8LPLiDzeZty4e7GVj8f0JpkZ9Ebl", "bytes": 25156, "readback": "PASS"},
+    {"name": "studio-orbit-dish.glb", "id": "1KQuT5YNXNZHzk5277jHrGpOSxd9H212c", "parent_id": "19WNz8LPLiDzeZty4e7GVj8f0JpkZ9Ebl", "bytes": 26044, "readback": "PASS"},
+    {"name": "organic-editorial-tree.glb", "id": "1Fzfj5lO_naA3mLiRhJUT6bY1e_XFfvbo", "parent_id": "19WNz8LPLiDzeZty4e7GVj8f0JpkZ9Ebl", "bytes": 31412, "readback": "PASS"},
+    {"name": "oryzo-crystal-cluster-fallback.png", "id": "1N9PGwxxUwSlucpJ-gsnNF2UkGRw1IxTU", "parent_id": "1WXfnL8RtCigHgggV7pYCTY33RsETAlmZ", "bytes": 4114, "readback": "PASS"},
+    {"name": "studio-orbit-dish-fallback.png", "id": "1K_mtkVzRELz6dOXbf_cZSf9FXbAitmAD", "parent_id": "1WXfnL8RtCigHgggV7pYCTY33RsETAlmZ", "bytes": 4620, "readback": "PASS"},
+    {"name": "organic-editorial-tree-fallback.png", "id": "1RQw32vZD5junNIqDEibIV7lsejahyLjj", "parent_id": "1WXfnL8RtCigHgggV7pYCTY33RsETAlmZ", "bytes": 4639, "readback": "PASS"},
+    {"name": "oryzo-crystal-cluster.glb.gz", "id": "16vRv__zrQ3-YLdI_TN8FGyMKrwNQDYxi", "parent_id": "1HKmw7R_bFO0t8CvkIJ3vHCFDImVgi7Ch", "bytes": 8067, "readback": "PASS"},
+    {"name": "studio-orbit-dish.glb.gz", "id": "1AptrUZNAj-PUT3ogcQrBnbyxmD5YF_xz", "parent_id": "1HKmw7R_bFO0t8CvkIJ3vHCFDImVgi7Ch", "bytes": 6874, "readback": "PASS"},
+    {"name": "organic-editorial-tree.glb.gz", "id": "1Qa-9uiJ5f00kHYuMuI3CMbDZTqA3KOzY", "parent_id": "1HKmw7R_bFO0t8CvkIJ3vHCFDImVgi7Ch", "bytes": 10857, "readback": "PASS"},
+    {"name": "STUDIOFRAME_3D_RUNTIME_MANIFEST.json", "id": "1fCe15w_uMHaXfUx0MlucnJYw0Eegzx8F", "parent_id": "1HKmw7R_bFO0t8CvkIJ3vHCFDImVgi7Ch", "bytes": 2131, "readback": "PASS", "exact_byte_readback": true},
+    {"name": "LICENSE_KENNEY_SPACE_KIT.txt", "id": "1gKifR2PCG9qPFVib0wo8hqtIqOqslzHn", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 610, "readback": "PASS"},
+    {"name": "LICENSE_KENNEY_NATURE_KIT.txt", "id": "1IwVIehrTDuoN0n9YVw7QsAjHw6YZ17rg", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 611, "readback": "PASS"},
+    {"name": "EXTRA_ASSET_LIBRARY_MANIFEST.json", "id": "19EAiAuVfbyxmSUYJROPHMGJc34Su8HoO", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 4458, "readback": "PASS", "exact_byte_readback": true},
+    {"name": "MSE_V9_1_1_3D_ASSET_REGISTRY.json", "id": "1cCDGTM1VjGJd1YMPCZqePWfblxUUdfQh", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 4970, "readback": "PASS", "exact_byte_readback": true},
+    {"name": "EDITOR_ENGINE_12_EXTRA_ASSETS_DRIVE_SYNC.json", "id": "1lEhztPke2ki909I_-HS6Jnfui-sf5_dI", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 3859, "readback": "PASS", "exact_byte_readback": true},
+    {"name": "EE12_ASSET_001_CONTRACT.md", "id": "1QEMvYaN5_gNziDbArSmAzOnxiNT5SqLl", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 3227, "readback": "PASS", "exact_byte_readback": true},
+    {"name": "EDITOR_ENGINE_12_EXTRA_ASSETS_LOCK.json", "id": "18Uh8PNlitYPh_ia56a4Vf9utuOXT8DLu", "parent_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM", "bytes": 9607, "sha256": "69cea931e1568a3448b54ef53a2c219856fcf9d3a2afe5ccd641263094dcab94", "readback": "PASS", "exact_byte_readback": true}
+  ],
+  "counts": {"uploaded": 17, "metadata_readback_pass": 17, "exact_byte_readback_pass": 6},
+  "public_site_publish": false
+}

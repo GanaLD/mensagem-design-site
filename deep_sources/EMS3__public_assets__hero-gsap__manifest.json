@@ -1,0 +1,30 @@
+{
+  "hero-spacecraft-user": {
+    "path": "hero-gsap/models/hero-spacecraft-user.glb",
+    "poster_path": "hero-gsap/posters/hero-spacecraft-user.png",
+    "content_type": "model/gltf-binary",
+    "bytes": 5951156,
+    "sha256": "16d40c862c3ec143bd40b4d92e565b6ee1b5c33ed80a576c772f507d6b07d711",
+    "poster_sha256": "b004fa05cae70281dcf950c70cf848d25cc7b3b7a67e3bd647d4bdb6299fd7f5",
+    "author": "ImLuisC",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://sketchfab.com/3d-models/nave-espacial-1c4ed0287d4b4579b5ec1a26de0d66a6",
+    "release_eligible": true,
+    "attribution_required": true
+  },
+  "hero-cat-user": {
+    "path": "hero-gsap/models/hero-cat-user.glb",
+    "poster_path": "hero-gsap/posters/hero-cat-user.png",
+    "content_type": "model/gltf-binary",
+    "bytes": 31642296,
+    "sha256": "7fd0c6f3b6720c3afb17e7b7873778d30dcc86a445ea866058122e76e9e0a5fb",
+    "poster_sha256": "bc8fb36890a7ddf2a3f62d096c3833e9acce053e09627784f56f776b199df419",
+    "author": "iRahulRajput",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://sketchfab.com/3d-models/cat-in-motion-3d-model-free-baa1120483c844e6bce9744f3f868c63",
+    "release_eligible": true,
+    "attribution_required": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "oryzo-controller": {
+    "path": "3d/oryzo-controller.glb.gz",
+    "engine": "glb",
+    "compression": "gzip",
+    "content_type": "model/gltf-binary",
+    "source_package": "game-controller-with-analog-sticks-and-directional-2026-02-09-02-24-05-utc.zip",
+    "source_drive_id": "1YnBKG5_VtBzTD-IzeV8oYvrv8q_TZNwP"
+  },
+  "oryzo-crystal-cluster": {
+    "path": "3d/oryzo-crystal-cluster.glb.gz",
+    "fallback_path": "3d/fallbacks/oryzo-crystal-cluster.png",
+    "engine": "glb",
+    "compression": "gzip",
+    "content_type": "model/gltf-binary",
+    "license": "CC0-1.0",
+    "source_page": "https://kenney.nl/assets/space-kit",
+    "source_glb_sha256": "fbe5ce9cf6a036594b0eb4fc475633753bcd05780bf60bd82aa9c63fcbfd4e76",
+    "runtime_sha256": "f0f71fda56dcf784510713d41e0f98bb24812151b9a0cccafabbde9b6f6a7bf7",
+    "fallback_sha256": "adbabdcd08c7294f5b499d103862e1ce39e9b36e3ed2cd862b240624c3216f9e"
+  },
+  "studio-orbit-dish": {
+    "path": "3d/studio-orbit-dish.glb.gz",
+    "fallback_path": "3d/fallbacks/studio-orbit-dish.png",
+    "engine": "glb",
+    "compression": "gzip",
+    "content_type": "model/gltf-binary",
+    "license": "CC0-1.0",
+    "source_page": "https://kenney.nl/assets/space-kit",
+    "source_glb_sha256": "143dd36b2c427e3201110967a18fd836bc7aa8002dbf3e44efa42c75fbb44ae5",
+    "runtime_sha256": "ee1373e8528f83505f15518329d39513901b4cde2a3a11d14b603c05203a4953",
+    "fallback_sha256": "cd83f18d45aaa58658e123eafccc0c0f6ce750d62ed443d92a3bf46c100f85b0"
+  },
+  "organic-editorial-tree": {
+    "path": "3d/organic-editorial-tree.glb.gz",
+    "fallback_path": "3d/fallbacks/organic-editorial-tree.png",
+    "engine": "glb",
+    "compression": "gzip",
+    "content_type": "model/gltf-binary",
+    "license": "CC0-1.0",
+    "source_page": "https://kenney.nl/assets/nature-kit",
+    "source_glb_sha256": "c041daf2f0fb1d49e4325227cbcd58667adbe51e9b55e8c1f0a94b74cc521b3b",
+    "runtime_sha256": "4d25e426ef5639e7f97f4bcec129c048c0d8b8229e7c62ea1c7801b39f3bb6b4",
+    "fallback_sha256": "815d586f11c5d317f08da1cf0af4eec83018875468503e565759c1a67e2d5f25"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "phase": "V9.1.1-E",
+  "runtime_assets": [
+    {
+      "id": "oryzo-controller",
+      "label": "ORYZO · Game Controller",
+      "type": "glb",
+      "runtime_ready": true,
+      "bundled_path": "3d/oryzo-controller.glb",
+      "source_drive_file_id": "1YnBKG5_VtBzTD-IzeV8oYvrv8q_TZNwP",
+      "source_package": "game-controller-with-analog-sticks-and-directional-2026-02-09-02-24-05-utc.zip",
+      "placements": [
+        "hero",
+        "global_background",
+        "section"
+      ],
+      "recommended_theme": "oryzo-ai",
+      "fallback": "required_by_scene_config"
+    },
+    {
+      "id": "oryzo-crystal-cluster",
+      "label": "ORYZO · Crystal Cluster",
+      "type": "glb",
+      "runtime_ready": true,
+      "bundled_path": "3d/oryzo-crystal-cluster.glb.gz",
+      "fallback_path": "3d/fallbacks/oryzo-crystal-cluster.png",
+      "compression": "gzip",
+      "license": "CC0-1.0",
+      "source_page": "https://kenney.nl/assets/space-kit",
+      "source_glb_sha256": "fbe5ce9cf6a036594b0eb4fc475633753bcd05780bf60bd82aa9c63fcbfd4e76",
+      "runtime_sha256": "f0f71fda56dcf784510713d41e0f98bb24812151b9a0cccafabbde9b6f6a7bf7",
+      "fallback_sha256": "adbabdcd08c7294f5b499d103862e1ce39e9b36e3ed2cd862b240624c3216f9e",
+      "placements": ["hero", "global_background", "section"],
+      "recommended_theme": "oryzo-ai",
+      "fallback": "bundled"
+    },
+    {
+      "id": "studio-orbit-dish",
+      "label": "Studio · Orbit Dish",
+      "type": "glb",
+      "runtime_ready": true,
+      "bundled_path": "3d/studio-orbit-dish.glb.gz",
+      "fallback_path": "3d/fallbacks/studio-orbit-dish.png",
+      "compression": "gzip",
+      "license": "CC0-1.0",
+      "source_page": "https://kenney.nl/assets/space-kit",
+      "source_glb_sha256": "143dd36b2c427e3201110967a18fd836bc7aa8002dbf3e44efa42c75fbb44ae5",
+      "runtime_sha256": "ee1373e8528f83505f15518329d39513901b4cde2a3a11d14b603c05203a4953",
+      "fallback_sha256": "cd83f18d45aaa58658e123eafccc0c0f6ce750d62ed443d92a3bf46c100f85b0",
+      "placements": ["hero", "global_background", "section"],
+      "recommended_theme": "workplace-neura",
+      "fallback": "bundled"
+    },
+    {
+      "id": "organic-editorial-tree",
+      "label": "Editorial · Organic Tree",
+      "type": "glb",
+      "runtime_ready": true,
+      "bundled_path": "3d/organic-editorial-tree.glb.gz",
+      "fallback_path": "3d/fallbacks/organic-editorial-tree.png",
+      "compression": "gzip",
+      "license": "CC0-1.0",
+      "source_page": "https://kenney.nl/assets/nature-kit",
+      "source_glb_sha256": "c041daf2f0fb1d49e4325227cbcd58667adbe51e9b55e8c1f0a94b74cc521b3b",
+      "runtime_sha256": "4d25e426ef5639e7f97f4bcec129c048c0d8b8229e7c62ea1c7801b39f3bb6b4",
+      "fallback_sha256": "815d586f11c5d317f08da1cf0af4eec83018875468503e565759c1a67e2d5f25",
+      "placements": ["hero", "global_background", "section"],
+      "recommended_theme": "structured",
+      "fallback": "bundled"
+    }
+  ],
+  "authoring_sources": [
+    {
+      "id": "reactive-background-spline-source",
+      "label": "Reactive Tile Background · Spline source",
+      "type": "spline_source",
+      "runtime_ready": false,
+      "bundled_source_path": "extensions/sources/phase_e/reactive_background.spline",
+      "source_drive_file_id": "1jTjTSF4yHxfd_R4RHQUVozRKI1oDKsXi",
+      "source_package": "reactive-tile-background-2025-10-27-09-13-55-utc.zip",
+      "observed_features": [
+        "Rectangle Clones",
+        "Follow",
+        "LookAt",
+        "cursor",
+        "pointer leave reset"
+      ],
+      "integration": "native_reactive_tiles_adapter",
+      "evidence_limitation": "The supplied .spline authoring file is not a public .splinecode runtime. StudioFrame implements a native responsive tile adapter while preserving the source as evidence."
+    },
+    {
+      "id": "floating-island-spline-source",
+      "label": "Floating Island · Spline source",
+      "type": "spline_source",
+      "runtime_ready": false,
+      "bundled_source_path": "extensions/sources/phase_e/floating_island.spline",
+      "source_drive_file_id": "1r1W-RzzJXZ-ObFJw-PzG0_gG_alUex6c",
+      "source_package": "floating-island-2025-05-19-05-58-29-utc.zip",
+      "integration": "source_only_until_splinecode_or_glb_export",
+      "evidence_limitation": "Authoring .spline is preserved but is not falsely declared directly renderable by the browser runtime."
+    }
+  ],
+  "catalog_refs": [
+    {
+      "id": "derelict-palace",
+      "drive_file_id": "1L3a4c5_Io5_cWprCPSgdOOniuVqXUmoK"
+    },
+    {
+      "id": "futuristic-metropolis",
+      "drive_file_id": "1JnCP6VR34LWDnTviG_6BI53JhsqrSQ7g"
+    },
+    {
+      "id": "storefront-kitbash",
+      "drive_file_id": "1NpSUVARZZMajrzloq-a1wi56EOpijzuD"
+    },
+    {
+      "id": "angel-character",
+      "drive_file_id": "1ewc4nmGuNooor2IQHaUU0irtt3HDhPHh"
+    },
+    {
+      "id": "imperial-estate",
+      "drive_file_id": "1FjJVyM4YUY0UAJnzVZjw-7m5yaElTkti"
+    }
+  ]
+}

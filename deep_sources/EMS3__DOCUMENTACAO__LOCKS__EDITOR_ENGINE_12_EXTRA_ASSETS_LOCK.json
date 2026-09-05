@@ -1,0 +1,169 @@
+{
+  "schema": "studioframe-editor-engine-12-extra-assets-lock-v1",
+  "contract_id": "EE12-ASSET-001",
+  "status": "LOCAL_AND_DRIVE_PASS",
+  "generated_at": "2026-08-30T10:23:44-03:00",
+  "public_release_claim": false,
+  "mse2_packaging_authorized": false,
+  "base": {
+    "candidate": "work/editor_engine_12/candidate_program",
+    "release_line": "MS1 / StudioFrame V9.1.1",
+    "parent_lock": "DOCUMENTACAO/LOCKS/EDITOR_ENGINE_12_TREE_INTERFACE_LOCK.json",
+    "canonical_owner": "site_builder.three_d_scene",
+    "public_remote_publish": false
+  },
+  "functional_scope": {
+    "assets": 3,
+    "license": "CC0-1.0",
+    "runtime_transport": "GLB GZIP",
+    "fallback": "packaged PNG",
+    "preview": true,
+    "selective_build_copy": true,
+    "mobile_fallback": true,
+    "reduced_motion_fallback": true,
+    "webgl_failure_fallback": true,
+    "drive_viewer_used": false,
+    "parallel_owner_created": false,
+    "parallel_save_build_publish_created": false
+  },
+  "changed_executable_files": [
+    {
+      "path": "templates/admin.html",
+      "bytes": 183149,
+      "sha256": "d10ab0f1fd8bacc78d808a94c3e1f94ab4558b65ab17bb2294c48c4efb03a55c",
+      "purpose": "Expose the three licensed assets in the existing 3D editor controls."
+    },
+    {
+      "path": "static/admin.js",
+      "bytes": 1034225,
+      "sha256": "2bdcafff05a787627c0fc312a51b76267d744ec51ee6a0b08511869ae7279abc",
+      "purpose": "Resolve bundled asset selection through site_builder.three_d_scene."
+    },
+    {
+      "path": "public_assets/site.js",
+      "bytes": 524128,
+      "sha256": "60a4b6fa4a037ed12906945b520e6b10e468df6e9856c625aea0af01eae61263",
+      "purpose": "Inflate GZIP GLB and mount the matching packaged fallback in Preview and Build."
+    },
+    {
+      "path": "app/exporter.py",
+      "bytes": 153917,
+      "sha256": "5645c5353b606215703283103d900cc938e71df0f73dfd649b88ba99d05e55c0",
+      "purpose": "Copy only the selected bundled GLB and its matching fallback through the existing Build owner."
+    }
+  ],
+  "unchanged_shared_styles": [
+    {
+      "path": "static/admin.css",
+      "bytes": 269647,
+      "sha256": "69923782acd75dba8b481361082c948f9f87456a397ebd14da5e484ea72dfd09"
+    },
+    {
+      "path": "public_assets/site.css",
+      "bytes": 351008,
+      "sha256": "0161174006d8d538f3e10cc61c6c9e4819b385852cb7f39525ce740b54182b38"
+    }
+  ],
+  "assets": [
+    {
+      "id": "oryzo-crystal-cluster",
+      "source": {"path": "SOURCE_MATERIALS/EXTRA_ASSETS/KENNEY_CC0/oryzo-crystal-cluster.glb", "bytes": 25156, "sha256": "fbe5ce9cf6a036594b0eb4fc475633753bcd05780bf60bd82aa9c63fcbfd4e76"},
+      "runtime": {"path": "public_assets/3d/oryzo-crystal-cluster.glb.gz", "bytes": 8067, "sha256": "f0f71fda56dcf784510713d41e0f98bb24812151b9a0cccafabbde9b6f6a7bf7"},
+      "fallback": {"path": "public_assets/3d/fallbacks/oryzo-crystal-cluster.png", "bytes": 4114, "sha256": "adbabdcd08c7294f5b499d103862e1ce39e9b36e3ed2cd862b240624c3216f9e"}
+    },
+    {
+      "id": "studio-orbit-dish",
+      "source": {"path": "SOURCE_MATERIALS/EXTRA_ASSETS/KENNEY_CC0/studio-orbit-dish.glb", "bytes": 26044, "sha256": "143dd36b2c427e3201110967a18fd836bc7aa8002dbf3e44efa42c75fbb44ae5"},
+      "runtime": {"path": "public_assets/3d/studio-orbit-dish.glb.gz", "bytes": 6874, "sha256": "ee1373e8528f83505f15518329d39513901b4cde2a3a11d14b603c05203a4953"},
+      "fallback": {"path": "public_assets/3d/fallbacks/studio-orbit-dish.png", "bytes": 4620, "sha256": "cd83f18d45aaa58658e123eafccc0c0f6ce750d62ed443d92a3bf46c100f85b0"}
+    },
+    {
+      "id": "organic-editorial-tree",
+      "source": {"path": "SOURCE_MATERIALS/EXTRA_ASSETS/KENNEY_CC0/organic-editorial-tree.glb", "bytes": 31412, "sha256": "c041daf2f0fb1d49e4325227cbcd58667adbe51e9b55e8c1f0a94b74cc521b3b"},
+      "runtime": {"path": "public_assets/3d/organic-editorial-tree.glb.gz", "bytes": 10857, "sha256": "4d25e426ef5639e7f97f4bcec129c048c0d8b8229e7c62ea1c7801b39f3bb6b4"},
+      "fallback": {"path": "public_assets/3d/fallbacks/organic-editorial-tree.png", "bytes": 4639, "sha256": "815d586f11c5d317f08da1cf0af4eec83018875468503e565759c1a67e2d5f25"}
+    }
+  ],
+  "licenses": [
+    {"path": "SOURCE_MATERIALS/EXTRA_ASSETS/KENNEY_CC0/LICENSE_KENNEY_SPACE_KIT.txt", "bytes": 610, "sha256": "bd4e050e69d41351282c4d53f943cd4d80a80b968593e60653ba5292637941b7"},
+    {"path": "SOURCE_MATERIALS/EXTRA_ASSETS/KENNEY_CC0/LICENSE_KENNEY_NATURE_KIT.txt", "bytes": 611, "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d"}
+  ],
+  "registries_and_manifests": [
+    {"path": "public_assets/3d/manifest.json", "bytes": 2131, "sha256": "3a0a1845eb5f7cbe521ea85cb4077a9e377401712fa5d6b5a14b6ca152291b4b"},
+    {"path": "DOCUMENTACAO/MSE_V9_1_1_3D_ASSET_REGISTRY.json", "bytes": 4970, "sha256": "6cf6973b6cd49d9de861d90e68b581a84ee1cac83dc2918f61c2e8a5471ece54"},
+    {"path": "DOCUMENTACAO/EXTRA_ASSET_LIBRARY_MANIFEST.json", "bytes": 4458, "sha256": "42650bfeb3462b639c11cd28f75e64c0e66f223052b8e6c0c7e8f2d52230e0ba"},
+    {"path": "DOCUMENTACAO/CONTRATOS/EDITOR_ENGINE_12/12_CONTRATO_BIBLIOTECA_3D_COMPLEMENTAR.md", "bytes": 3227, "sha256": "fae50183c0211e458c301b287a152798ba0b4fc3e5d97ec5c07b769e0b54d8cd"}
+  ],
+  "tools": [
+    {"path": "tools/materialize_extra_assets.py", "bytes": 7763, "sha256": "6180c87a3602c525348edd1a1ca7a9f7b014985cdcd2bd6292618d03508a8530"},
+    {"path": "tools/selftest_editor_engine_12_extra_assets.py", "bytes": 8553, "sha256": "d7ea6b43dc4f3fa17cf7217e9f5fb458e587cea80f815b2315b3a7cc6bc8e3a0"},
+    {"path": "tools/browser_test_editor_engine_12_extra_assets.py", "bytes": 9432, "sha256": "3859740a4d91c72106ae2ffc3ee9b17190586ff3081956c006c9ae0e06e42c1c"},
+    {"path": "tools/build_editor_engine_12_extra_asset_evidence.py", "bytes": 2806, "sha256": "b66bafa9ab5cfa9ffc5a6b5d49a713fc7ebcf61c3e9e8addf344e2fd02be8975"}
+  ],
+  "contract_governance": {
+    "active_index": {"path": "DOCUMENTACAO/CONTRATOS/MSE_ACTIVE_CONTRACT_INDEX.md", "sha256": "df3466871993937b1914044e98131d7628796b87b078c85e5db069381982f766"},
+    "contract_system_lock": {"path": "DOCUMENTACAO/LOCKS/MSE_CONTRACT_SYSTEM_LOCK.json", "sha256": "b5d0fb5ae8720c3de16269133aaf50cd1198de14a72451880fcc5e73d2c7944b"},
+    "historical_baselines_replaced": false,
+    "authorized_lock_migrations_added": [
+      "PROJECT-001",
+      "SERVICES-001",
+      "SEO-001",
+      "DRIVE-001",
+      "FINAL-001",
+      "V9GAP-001"
+    ],
+    "legacy_validators_migrated_to_authorized_hash_lists": [
+      "tools/selftest_mse_v9_data_drive_contract.py",
+      "tools/selftest_mse_v9_final_integration_contract.py",
+      "tools/selftest_mse_v9_gap_closure_contract.py"
+    ]
+  },
+  "build_evidence": {
+    "path": "TEST_EVIDENCE/EDITOR_ENGINE_12_EXTRA_ASSETS_BUILD",
+    "selected_asset": "oryzo-crystal-cluster",
+    "proof": {"path": "TEST_EVIDENCE/EDITOR_ENGINE_12_EXTRA_ASSETS_BUILD/EE12_EXTRA_ASSETS_BUILD_PROOF.json", "bytes": 1189, "sha256": "31ec10f142a0965f90e1725750b32be96a0d0c4aa29f2cc7d094f3507205cf0c"},
+    "selected_glb_only": true,
+    "matching_fallback_only": true
+  },
+  "drive": {
+    "root_folder_id": "1Ea_4oibE8oUY0wfYcUqRXB17ev_gaT7H",
+    "licenses_and_manifests_folder_id": "1wvW5GVKcvmTJ5A21NPvef13P36LBPYYM",
+    "sync_manifest_file_id": "1lEhztPke2ki909I_-HS6Jnfui-sf5_dI",
+    "pre_lock_upload": "16/16 metadata read-back PASS",
+    "pre_lock_exact_byte_readback": "5/5 PASS",
+    "inherited_anyone_writer_permission_observed": true,
+    "permission_changed": false
+  },
+  "protected_owners": [
+    {"path": "app/state_v6.py", "sha256": "bf029ea3dddd813d6ed030df691f35f3537c8872984d97be636bddc3c115a1d9", "match": true},
+    {"path": "app/publication_v6.py", "sha256": "2560140f8d5c49fe965435c68fe13bd2948b05cf4582d1887c5b67409ea05140", "match": true},
+    {"path": "app/github_v6.py", "sha256": "a82a5018ccb2d14eb1bd9904fca669d61c9a66e9e471739b1a7c1c8c5b28bd0d", "match": true},
+    {"path": "app/server.py", "sha256": "e1d04320722f5a686792aab030debcfe2a1f1bab4a1501ef6c94cf0543130bbc", "match": true},
+    {"path": "app/drive_v6.py", "sha256": "6a41524be40ae52baa9f62ce8b308eb1b80485033122c1be1945a10ac9dfce5f", "match": true},
+    {"path": "templates/site_index.html", "sha256": "91c69ebc42ef9b0eff70a24ad6dcc654d5ca11e2a753f052c31f485ecb037cb0", "match": true}
+  ],
+  "validation": [
+    {"gate": "EE12-ASSET-001 static/build", "result": "55/55 PASS"},
+    {"gate": "EE12-ASSET-001 Chrome desktop/mobile/reduced-motion", "result": "3/3 assets PASS"},
+    {"gate": "Application selftest", "result": "107/107 PASS"},
+    {"gate": "Editor canonical tree", "result": "82/82 PASS"},
+    {"gate": "Portfolio tree", "result": "22/22 PASS"},
+    {"gate": "Active contract system", "result": "PASS"},
+    {"gate": "Domain contract suite", "result": "15/15 PASS"},
+    {"gate": "PLAYER-001 executable fingerprints", "result": "22/22 IDENTICAL"},
+    {"gate": "THREED-001", "result": "31/31 PASS"},
+    {"gate": "PLAYER-001", "result": "20/20 PASS"},
+    {"gate": "Player Phase 11", "result": "40/40 PASS"},
+    {"gate": "Phase E", "result": "18/18 PASS"},
+    {"gate": "HERO-002", "result": "53/53 PASS"},
+    {"gate": "BACKGROUND-001", "result": "13/13 PASS"},
+    {"gate": "PHASER-001", "result": "27/27 PASS"},
+    {"gate": "CORE-001", "result": "PASS"}
+  ],
+  "external_blocks": [
+    "Public GitHub Pages/domain proof was not executed by this checkpoint.",
+    "EE12-PLAYER-001 still requires proof in the published public site.",
+    "Assets available in the editor do not mean any complete theme is implemented.",
+    "MSE2 packaging remains unauthorized until public and clean-extraction release gates pass."
+  ]
+}

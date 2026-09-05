@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "owner": "assets.registry",
+  "stage": "R2.2_STAGE5",
+  "assets": [
+    {
+      "id": "stage5-player-proof-webm",
+      "path": "showcases/proof/stage5-player-proof.webm",
+      "type": "video",
+      "owner": "studio.player",
+      "critical": false,
+      "mime": "video/webm",
+      "sha256": "5ded0170d87c52fe43bc3742d7f8412f5d5b99cdb9c8a05ee25b400d9ca77390",
+      "bytes": 172389,
+      "poster": "/assets/showcases/proof/stage5-poster.png",
+      "proof_role": "primary-functional-qa"
+    },
+    {
+      "id": "stage5-player-proof",
+      "path": "showcases/proof/stage5-player-proof.mp4",
+      "type": "video",
+      "owner": "studio.player",
+      "critical": false,
+      "mime": "video/mp4",
+      "sha256": "d2bc3067b533cb4b449532f4113b5c46349bc57480188f2566cf172f793c9cd5",
+      "bytes": 201459,
+      "poster": "/assets/showcases/proof/stage5-poster.png",
+      "proof_role": "mp4-compatibility-fixture"
+    },
+    {
+      "id": "stage5-player-poster",
+      "path": "showcases/proof/stage5-poster.png",
+      "type": "image",
+      "owner": "studio.player",
+      "critical": false,
+      "mime": "image/png",
+      "sha256": "4d6a3c1069f72036478cff3bc629f757f3513734bcbb4d50590653c922ecc9fe",
+      "bytes": 8900
+    },
+    {
+      "id": "stage5-pdf-proof",
+      "path": "showcases/proof/stage5-pdf-proof.pdf",
+      "type": "pdf",
+      "owner": "studio.pdf",
+      "critical": false,
+      "mime": "application/pdf",
+      "sha256": "bbe7b810c12359ee6c8ffe25fc09c9cb69e9b15c18e4a3aee65fada0761a7609",
+      "bytes": 4108
+    },
+    {
+      "id": "stage5-html5-proof",
+      "path": "showcases/proof/html5/index.html",
+      "type": "html",
+      "owner": "studio.html5",
+      "critical": false,
+      "mime": "text/html",
+      "sha256": "4ed3640967c73221359735c680fb0b95d9994809c27339d7943a51b35d5da401",
+      "bytes": 1570
+    },
+    {
+      "id": "stage5-model-fallback",
+      "path": "3d/fallbacks/studio-orbit-dish.png",
+      "type": "image",
+      "owner": "studio.model",
+      "critical": false,
+      "mime": "image/png",
+      "sha256": "cd83f18d45aaa58658e123eafccc0c0f6ce750d62ed443d92a3bf46c100f85b0",
+      "bytes": 4620
+    }
+  ],
+  "consumer": "home.showcase_hub",
+  "schema": "mse2.showcase.asset-manifest.v1"
+}

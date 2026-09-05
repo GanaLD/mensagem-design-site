@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "public_standard": "MENSAGEM_IMMERSIVE_WEB_STARTER_V4",
+  "owner": "assets.registry",
+  "assets": [
+    {
+      "id": "v4-posters-project-01-jpg",
+      "path": "v4/posters/project-01.jpg",
+      "type": "image",
+      "owner": "projects.registry",
+      "critical": false,
+      "name": "project-01.jpg"
+    },
+    {
+      "id": "v4-posters-project-02-jpg",
+      "path": "v4/posters/project-02.jpg",
+      "type": "image",
+      "owner": "projects.registry",
+      "critical": false,
+      "name": "project-02.jpg"
+    },
+    {
+      "id": "v4-posters-project-03-jpg",
+      "path": "v4/posters/project-03.jpg",
+      "type": "image",
+      "owner": "projects.registry",
+      "critical": false,
+      "name": "project-03.jpg"
+    },
+    {
+      "id": "v4-video-project-01-preview-mp4",
+      "path": "v4/video/project-01-preview.mp4",
+      "type": "video",
+      "owner": "studio.player",
+      "critical": false,
+      "name": "project-01-preview.mp4"
+    },
+    {
+      "id": "v4-video-project-02-preview-mp4",
+      "path": "v4/video/project-02-preview.mp4",
+      "type": "video",
+      "owner": "studio.player",
+      "critical": false,
+      "name": "project-02-preview.mp4"
+    },
+    {
+      "id": "v4-video-project-03-preview-mp4",
+      "path": "v4/video/project-03-preview.mp4",
+      "type": "video",
+      "owner": "studio.player",
+      "critical": false,
+      "name": "project-03-preview.mp4"
+    },
+    {
+      "id": "v4-demo-demo-case-pdf",
+      "path": "v4/demo/demo-case.pdf",
+      "type": "pdf",
+      "owner": "studio.pdf",
+      "critical": false,
+      "name": "demo-case.pdf"
+    },
+    {
+      "id": "v4-demo-interactive-case-html",
+      "path": "v4/demo/interactive-case.html",
+      "type": "html",
+      "owner": "studio.html5",
+      "critical": false,
+      "name": "interactive-case.html"
+    },
+    {
+      "id": "v4-audio-ambient-mp3",
+      "path": "v4/audio/ambient.mp3",
+      "type": "audio",
+      "owner": "media.audio",
+      "critical": false,
+      "name": "ambient.mp3"
+    }
+  ],
+  "model_examples": [
+    "studio-orbit-dish",
+    "oryzo-controller",
+    "oryzo-crystal-cluster",
+    "organic-editorial-tree"
+  ]
+}
