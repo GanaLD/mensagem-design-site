@@ -1,0 +1,83 @@
+name: EMS3 Remote Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ems3_audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit canonical EMS3 package and V4 reference
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, urllib.request, hashlib, zipfile, json, re, pathlib, shutil
+          root=pathlib.Path('/tmp/ems3-audit'); root.mkdir(parents=True, exist_ok=True)
+          ids=[
+          '1u8n3CcrdQj1OFNxISl5EjzGw0idFxLDw','1e3hMX_eNG0IbbakEHbU-s5odekkbJYt0','1MT-UlN7SD2sLbasQ4-Xim_pTEHio6Mx3','1y_7n-FoDWvxJ1RnK6NH8ItgoLq2QChD0','1EoAp6mEQ18_J-vckYa_CYmd_dl6-4Bur','12wKsdJQU8L4gagNdQCc0YWLBMGLXKehd','1h6kr73s83W2Mp20F1Yd7JqsogjnCrjsI','1q5Q700wWkzI9pW3NgujU8E41QcrUD4uA','15GvcatEMG7Szd8EPmh7BvF0PCsf93IVZ','1h7P-CkKTCJefBz0SthL7iTpN0EVYq5PB','1O0ppyrl1AbQdCoRA4bgDuXNEH7zhfKuD','1AohbSE6HriemhcRRq_wckvO_XXH4x6jj','1UxmKpXWzOt8tLaWVxqZfueTsvXfG5r8a']
+          def dl(fid,path):
+              url=f'https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t'
+              req=urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
+              with urllib.request.urlopen(req, timeout=180) as r, open(path,'wb') as f: shutil.copyfileobj(r,f)
+          parts=[]
+          for i,fid in enumerate(ids):
+              p=root/f'part{i:02d}'; dl(fid,p); parts.append(p)
+          zpath=root/'EMS3_FULL_PROGRAM_CURRENT_20260905.zip'
+          with open(zpath,'wb') as out:
+              for p in parts:
+                  with open(p,'rb') as inp: shutil.copyfileobj(inp,out)
+          sha=hashlib.sha256(zpath.read_bytes()).hexdigest(); size=zpath.stat().st_size
+          report=[]
+          report += [f'PACKAGE_SIZE={size}',f'PACKAGE_SHA256={sha}']
+          with zipfile.ZipFile(zpath) as z:
+              names=z.namelist(); report.append(f'ZIP_ENTRIES={len(names)}')
+              report.append('TOP_LEVEL='+','.join(sorted(set(n.split('/')[0] for n in names if n))))
+              keys=['EMS3/static/admin.css','EMS3/static/admin.js','EMS3/templates/admin.html','EMS3/public_assets/site.js','EMS3/templates/pages/home.html','EMS3/templates/sections/home_hero.html','EMS3/app/exporter.py','EMS3/app/state_v6.py']
+              for k in keys:
+                  if k in names:
+                      b=z.read(k); report.append(f'KEY {k} bytes={len(b)} sha256={hashlib.sha256(b).hexdigest()}')
+                      txt=b.decode('utf-8','replace')
+                      for token in ['UI-002','UI-003','UI-004','UI-005','UI-006','site-tree-sidebar','sidebar-drawer-open','setupHeroGsapScroll','site_builder.hero.gsap_scroll','data-experience-section','data-immersive-contract','pdf','html5','studio.model']:
+                          c=txt.count(token)
+                          if c: report.append(f'  TOKEN {token}={c}')
+                  else: report.append(f'MISSING {k}')
+              # save key sources for connector inspection
+              outdir=pathlib.Path('audit_sources'); outdir.mkdir(exist_ok=True)
+              for k in keys:
+                  if k in names:
+                      (outdir/pathlib.Path(k).name).write_bytes(z.read(k))
+          # download V4, Hero, PDF
+          refs={'V4.zip':'16EKOvLmPVptPHziWce0ml_juw2ZblCBD','hero.mp4':'1TwuqgbrVMAu44EkVqocZGHDI2lCy5Mv0','showcase.pdf':'1BznGOFXMcp1Xorww8kTZJ6xymCl4MCNb'}
+          for nm,fid in refs.items():
+              p=root/nm; dl(fid,p); report.append(f'REF {nm} bytes={p.stat().st_size} sha256={hashlib.sha256(p.read_bytes()).hexdigest()}')
+          v4=root/'V4.zip'
+          with zipfile.ZipFile(v4) as z:
+              names=z.namelist(); report.append(f'V4_ENTRIES={len(names)}')
+              report.append('V4_TOP_LEVEL='+','.join(sorted(set(n.split('/')[0] for n in names if n))))
+              for n in names:
+                  low=n.lower()
+                  if low.endswith(('index.html','manifest.json','package.json')) or 'hero' in low or low.endswith(('.js','.css')) and len(n.split('/'))<=4:
+                      report.append('V4_FILE '+n)
+              # export compact relevant text files
+              vout=pathlib.Path('v4_sources'); vout.mkdir(exist_ok=True)
+              candidates=[n for n in names if n.lower().endswith(('index.html','manifest.json','package.json')) or n.lower().endswith(('home.html','hero.html'))]
+              for n in candidates[:30]:
+                  if not n.endswith('/'):
+                      safe=re.sub(r'[^A-Za-z0-9_.-]+','__',n)[-180:]
+                      try:(vout/safe).write_bytes(z.read(n))
+                      except: pass
+          pathlib.Path('ems3_remote_audit.txt').write_text('\n'.join(report)+'\n',encoding='utf-8')
+          PY
+          git config user.name 'EMS3 Audit Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add ems3_remote_audit.txt audit_sources v4_sources
+          git commit -m 'audit: inspect canonical EMS3 and Immersive V4' || true
+          git push
