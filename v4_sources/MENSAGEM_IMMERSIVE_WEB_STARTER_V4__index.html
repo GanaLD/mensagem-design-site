@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-experience="mensagem-v4">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#100904" />
+  <meta name="description" content="Mensagem Immersive Engine V4: portfólio imersivo com WebGL persistente, grid de projetos, 3D interativo, PDF navegável, serviços, orçamento e briefing." />
+  <link rel="canonical" href="https://example.com/" />
+  <title>Mensagem Immersive Engine V4 — Immersive Portfolio</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <canvas id="experience-canvas" aria-hidden="true"></canvas>
+  <div class="experience-noise" aria-hidden="true"></div>
+
+  <header class="site-header site-header-v3" data-ui="header">
+    <a class="brand" href="#hero"><strong>MENSAGEM</strong><span>IMMERSIVE V4</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#hero">Início</a><a href="#projects">Projetos</a><a href="#services">Serviços</a><a href="#start-project">Começar projeto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" data-action="theme" aria-label="Alternar tema" title="Claro / Escuro">◐</button>
+      <button class="icon-button" data-action="audio" aria-label="Ativar ou desativar música" title="Música ambiente">♪</button>
+      <a class="beam-button compact" data-magnetic href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <aside class="section-rail" aria-label="Progresso da experiência">
+    <a href="#hero"><span>01</span><b>Intro</b></a>
+    <a href="#projects"><span>02</span><b>Work</b></a>
+    <a href="#three"><span>03</span><b>3D</b></a>
+    <a href="#showcases"><span>04</span><b>PDF</b></a>
+    <a href="#services"><span>05</span><b>Services</b></a>
+    <a href="#start-project"><span>06</span><b>Briefing</b></a>
+  </aside>
+
+  <aside class="engine-hud engine-hud-v3" data-engine-hud hidden aria-label="Diagnóstico da Experience Engine">
+    <header><i></i><strong>EXPERIENCE DEBUG</strong></header>
+    <dl>
+      <div><dt>FPS</dt><dd data-debug-fps>—</dd></div><div><dt>QUALITY</dt><dd data-debug-quality>—</dd></div>
+      <div><dt>SECTION</dt><dd data-debug-section>—</dd></div><div><dt>PROGRESS</dt><dd data-debug-progress>—</dd></div>
+      <div><dt>VELOCITY</dt><dd data-debug-velocity>—</dd></div><div><dt>CAMERA</dt><dd data-debug-camera>—</dd></div>
+      <div><dt>SCENE</dt><dd data-debug-scene>—</dd></div><div><dt>CALLS</dt><dd data-debug-drawcalls>—</dd></div>
+      <div><dt>TRIANGLES</dt><dd data-debug-triangles>—</dd></div>
+    </dl>
+  </aside>
+
+  <main id="main">
+    <section id="hero" class="experience-section hero-v3" data-experience-section data-scene="main" data-camera-track="hero-camera" data-post-profile="hero" data-controller="HeroSection">
+      <div class="experience-sticky hero-stage">
+        <div class="hero-grid-v3" aria-hidden="true"></div>
+        <div class="hero-light hero-light-a" aria-hidden="true"></div>
+        <div class="hero-light hero-light-b" aria-hidden="true"></div>
+        <p class="hero-serial">MS / CINEMATIC WEB ENGINE / 003</p>
+        <div class="hero-title-layer hero-title-back" aria-hidden="true">MENSAGEM</div>
+        <div class="hero-title-layer hero-title-front" aria-hidden="true">MENSAGEM</div>
+        <div class="hero-copy-v3">
+          <p class="eyebrow">SCROLL IS THE PLAYHEAD · WEBGL PERSISTS</p>
+          <h1>O site não troca de banner.<br><em>A cena evolui.</em></h1>
+          <p>Um único relógio de scroll dirige câmera, objeto, atmosfera e composição. O DOM continua semântico e acessível enquanto o WebGL atravessa as seções.</p>
+          <div class="hero-actions"><a class="beam-button" data-magnetic href="#manifesto">Entrar na experiência</a><span class="technical-chip">ONE CLOCK / MANY OWNERS</span></div>
+        </div>
+        <div class="hero-proof-card proof-a"><span>01</span><strong>CAMERA SCRUB</strong><small>position · target · FOV</small></div>
+        <div class="hero-proof-card proof-b"><span>02</span><strong>PROCEDURAL GEOMETRY PACK</strong><small>cube · sphere · torus · cone · octa</small></div>
+        <div class="hero-proof-card proof-c"><span>03</span><strong>DEPTH COMPOSITING</strong><small>DOM → WebGL → DOM</small></div>
+        <div class="hero-scroll-cue"><span>SCROLL</span><i></i></div>
+      </div>
+    </section>
+
+    <section id="manifesto" class="experience-section manifesto-v3" data-experience-section data-scene="main" data-camera-track="manifesto-camera" data-post-profile="void" data-controller="StorySection">
+      <div class="experience-sticky manifesto-stage">
+        <header class="experience-kicker"><span>02</span><p>CONTINUOUS OBJECT / FOUR SHOTS</p></header>
+        <div class="manifesto-axis" aria-hidden="true"></div>
+        <div class="manifesto-copy">
+          <article data-shot="discovery"><span>01 / DESCOBERTA</span><h2>A forma nasce da escuridão.</h2><p>O objeto visto no Hero não é destruído. Ele atravessa a composição enquanto câmera, luz e texto assumem outro estado.</p></article>
+          <article data-shot="form"><span>02 / FORMA</span><h2>Profundidade é estrutura.</h2><p>Scroll não soma deslocamento. Cada frame é reconstruído a partir de um progresso normalizado e reversível.</p></article>
+          <article data-shot="motion"><span>03 / MOVIMENTO</span><h2>A câmera conta a história.</h2><p>Tracks separados definem plano geral, aproximação, órbita e preparação da próxima cena.</p></article>
+          <article data-shot="application"><span>04 / APLICAÇÃO</span><h2>A próxima seção já está viva.</h2><p>Prewarm prepara o próximo estado antes da transição terminar, reduzindo flashes e asset popping.</p></article>
+        </div>
+        <div class="manifesto-meter"><i></i><span>SECTION PROGRESS</span></div>
+      </div>
+    </section>
+
+    <section id="capabilities" class="experience-section capabilities-v3" data-experience-section data-scene="main" data-camera-track="capabilities-camera" data-post-profile="capabilities" data-controller="CapabilitiesSection">
+      <div class="experience-sticky capabilities-stage">
+        <header class="section-heading-v3"><span>03</span><div><p class="eyebrow">CAPABILITIES / THE ARTIFACT DISASSEMBLES</p><h2>Uma engine.<br>Vários sistemas isolados.</h2></div></header>
+        <div class="capability-list">
+          <article data-capability><span>01</span><h3>Scroll Director</h3><p>Progress global, progress por seção, direção, velocidade e medição real do DOM.</p></article>
+          <article data-capability><span>02</span><h3>WebGL Runtime</h3><p>Objeto persistente, câmera cinematográfica, quality tiers e progressive enhancement.</p></article>
+          <article data-capability><span>03</span><h3>Media System</h3><p>Preview, player exclusivo, áudio ambiente, ducking, PDF e HTML5 sandbox.</p></article>
+          <article data-capability><span>04</span><h3>Commerce Layer</h3><p>Serviços, orçamento, briefing, chatbot e handoff para WhatsApp sem sair do portfólio.</p></article>
+        </div>
+        <div class="capability-orbit-label">ARTIFACT / EXPLODED STATE</div>
+      </div>
+    </section>
+
+    <section id="projects" class="experience-section portfolio-v4" data-experience-section data-scene="projects" data-camera-track="projects-camera" data-post-profile="projects" data-controller="ProjectsSection">
+      <div class="portfolio-v4-stage content-shell" data-project-browser>
+        <header class="section-heading-v3 portfolio-v4-heading"><span>04</span><div><p class="eyebrow">SELECTED WORK / PROJECT REGISTRY</p><h2>O projeto é a entidade central.</h2><p>Cada card abre uma subpágina real. Título, descrição, mídias, serviços usados, serviço recomendado e SEO nascem do mesmo registro canônico.</p></div></header>
+        <div class="portfolio-filterbar" data-project-filters aria-label="Filtrar projetos"></div>
+        <div class="portfolio-grid-v4" data-project-grid data-project-limit="4"></div>
+        <div class="portfolio-v4-actions"><a class="beam-button" href="/projetos/">Ver todos os projetos</a><span>GRID RESPONSIVO · VIDEO PREVIEW · REAL ROUTES</span></div>
+      </div>
+    </section>
+
+    <section id="three" class="content-section three-lab-v3" data-experience-section data-scene="main" data-camera-track="media-camera" data-post-profile="media">
+      <div class="content-shell split-section-v3">
+        <div class="copy-stack"><p class="eyebrow">DIRECT 3D INTERACTION</p><h2>Depois do scroll, toque no objeto.</h2><p>O canvas persistente pertence à narrativa. Este segundo renderer é um laboratório isolado para inspeção: drag, zoom, presets de câmera, material e futura substituição por GLB.</p><ul class="spec-list"><li>OrbitControls com damping</li><li>Presets de câmera</li><li>Material metal / glass</li><li>Mesmo FrameLoop da aplicação</li><li>GLB optional fallback</li></ul></div>
+        <div class="model-stage advanced-model-stage" data-model-showcase data-model-src="">
+          <div class="model-toolbar"><button data-model-view="front">Frente</button><button data-model-view="three-quarter">3/4</button><button data-model-view="top">Topo</button><button data-model-view="reset">Reset</button><span></span><button data-model-material="metal">Metal</button><button data-model-material="glass">Glass</button></div>
+          <div class="model-status"><i></i><span>PROCEDURAL ASSET / REPLACEABLE BY GLB</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcases" class="content-section showcase-lab showcase-lab-v4" data-experience-section data-scene="main" data-camera-track="media-camera" data-post-profile="media">
+      <div class="content-shell">
+        <header class="section-heading-v3"><span>06</span><div><p class="eyebrow">PDF / EDITORIAL EXPERIENCE</p><h2>Documentos também pertencem ao portfólio.</h2><p>O PDF é renderizado como mídia interativa: páginas, zoom, teclado e tela cheia. O HTML5 permanece disponível como segundo formato de case.</p></div></header>
+        <div class="showcase-tabs" data-showcase-tabs>
+          <div class="showcase-tablist" role="tablist" aria-label="Showcases"><button role="tab" aria-selected="true" data-showcase-tab="pdf">PDF INTERATIVO</button><button role="tab" aria-selected="false" data-showcase-tab="html">HTML5 INTERATIVO</button></div>
+          <div class="showcase-panel" data-showcase-panel="pdf"><div class="pdf-stage pdf-stage-v4" data-pdf-showcase data-pdf-src="/assets/demo/demo-case.pdf" tabindex="0"><canvas aria-label="Página do PDF"></canvas><div class="pdf-controls pdf-controls-v4"><button type="button" data-pdf-prev aria-label="Página anterior">←</button><span data-pdf-status>Carregando…</span><button type="button" data-pdf-next aria-label="Próxima página">→</button><button type="button" data-pdf-zoom-out aria-label="Reduzir zoom">−</button><span data-pdf-zoom>100%</span><button type="button" data-pdf-zoom-in aria-label="Aumentar zoom">+</button><button type="button" data-pdf-fullscreen>Tela cheia</button></div></div></div>
+          <div class="showcase-panel" data-showcase-panel="html" hidden><div class="html5-stage"><iframe title="Demonstração HTML5 interativa" src="/assets/demo/interactive-case.html" sandbox="allow-scripts"></iframe></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="content-section media-v3" data-experience-section data-scene="media" data-camera-track="media-camera" data-post-profile="media">
+      <div class="content-shell">
+        <header class="section-heading-v3"><span>07</span><div><p class="eyebrow">MEDIA COORDINATOR</p><h2>Um toca. O outro respeita.</h2><p>Inicie A e depois B: o segundo pausa o primeiro. Com música ativa, o áudio ambiente reduz volume durante reprodução de mídia.</p></div></header>
+        <div class="media-player-grid media-player-grid-v3">
+          <article class="media-player-card"><video controls playsinline preload="metadata" data-coordinated-media poster="/assets/posters/project-01.jpg"><source src="/assets/video/project-01-preview.mp4" type="video/mp4"></video><div><span>PLAYER A</span><strong>Motion Preview</strong></div></article>
+          <article class="media-player-card"><video controls playsinline preload="metadata" data-coordinated-media poster="/assets/posters/project-02.jpg"><source src="/assets/video/project-02-preview.mp4" type="video/mp4"></video><div><span>PLAYER B</span><strong>3D Atmosphere</strong></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="content-section services-v4" data-experience-section data-scene="main" data-camera-track="start-camera" data-post-profile="start">
+      <div class="content-shell">
+        <header class="section-heading-v3"><span>08</span><div><p class="eyebrow">SERVICES / FROM PROOF TO OFFER</p><h2>O que o portfólio demonstra,<br>o Studio transforma em serviço.</h2><p>Os mesmos IDs de serviço usados nos projetos alimentam recomendações, filtros comerciais e o briefing.</p></div></header>
+        <div class="service-grid-v4" data-services-grid></div>
+      </div>
+    </section>
+
+    <section id="start-project" class="experience-section start-project-v3" data-experience-section data-scene="main" data-camera-track="start-camera" data-post-profile="start">
+      <div class="start-project-stage">
+        <header class="section-heading-v3"><span>09</span><div><p class="eyebrow">START A PROJECT / BRIEFING</p><h2>Do case que chamou atenção<br>para um projeto real.</h2><p>Use o orçamento para estimar escopo ou abra o briefing completo. Os fluxos continuam separados e podem receber o serviço recomendado de um projeto.</p></div></header>
+        <div class="start-grid">
+          <section id="quote" class="panel-form quote-builder-panel" data-experience-section data-scene="main" data-camera-track="start-camera" data-post-profile="start">
+            <div class="form-panel-header"><span>QUOTE BUILDER</span><b data-quote-step-label>ETAPA 1 / 4</b></div>
+            <form class="quote-form quote-wizard-v3" data-quote-form>
+              <fieldset data-quote-step="0"><legend>Qual serviço inicia o projeto?</legend><label>Serviço<select name="service" required><option value="">Selecione</option><option value="Branding">Branding</option><option value="Website Imersivo">Website Imersivo</option><option value="Motion / Vídeo">Motion / Vídeo</option><option value="3D">3D</option></select></label><label>Escopo<select name="scope" required><option value="">Selecione</option><option value="essencial">Essencial</option><option value="completo">Completo</option><option value="premium">Premium / imersivo</option></select></label></fieldset>
+              <fieldset data-quote-step="1" hidden><legend>O que entra junto?</legend><div class="check-grid"><label><input type="checkbox" name="extras" value="motion"> Motion</label><label><input type="checkbox" name="extras" value="3d"> 3D</label><label><input type="checkbox" name="extras" value="seo"> SEO</label><label><input type="checkbox" name="extras" value="copy"> Copy</label></div><label>Prazo<select name="deadline"><option value="flexivel">Flexível</option><option value="30">Até 30 dias</option><option value="60">30–60 dias</option><option value="90">60–90 dias</option></select></label></fieldset>
+              <fieldset data-quote-step="2" hidden><legend>Faixa e contexto.</legend><label>Investimento<select name="budget" required><option value="">Selecione</option><option>Até R$ 2 mil</option><option>R$ 2–5 mil</option><option>R$ 5–10 mil</option><option>R$ 10 mil+</option></select></label><label>Resumo<textarea name="summary" rows="5" required placeholder="Objetivo, contexto e entregáveis essenciais."></textarea></label><div class="quote-estimate"><span>ESTIMATIVA DE ESCOPO</span><strong data-quote-estimate>Selecione o serviço</strong><small>Estimativa não substitui proposta comercial.</small></div></fieldset>
+              <fieldset data-quote-step="3" hidden><legend>Para onde enviamos?</legend><label>Nome<input name="name" autocomplete="name" required></label><label>E-mail<input name="email" type="email" autocomplete="email" required></label></fieldset>
+              <div class="wizard-actions"><button type="button" data-quote-prev hidden>← Voltar</button><span></span><button class="beam-button" type="button" data-quote-next>Continuar →</button><button class="beam-button" type="submit" data-quote-submit hidden>Enviar pedido</button></div><p data-form-status role="status"></p>
+            </form>
+          </section>
+
+          <section id="briefing" class="panel-form briefing-panel" data-experience-section data-scene="main" data-camera-track="start-camera" data-post-profile="start">
+            <div class="form-panel-header"><span>BRIEFING</span><b>ESTRUTURADO</b></div>
+            <form class="quote-form" data-briefing-form>
+              <label>Nome<input name="name" autocomplete="name" required></label><label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+              <label class="full">Empresa / projeto<input name="company" autocomplete="organization"></label>
+              <label class="full">Objetivo<textarea name="objective" rows="5" required placeholder="O que precisa mudar ou acontecer?"></textarea></label>
+              <label class="full">Público<textarea name="audience" rows="4" required placeholder="Quem precisa perceber, comprar ou usar?"></textarea></label>
+              <label class="full">Referências<textarea name="references" rows="4" placeholder="Links, marcas, estética ou caminhos a evitar."></textarea></label>
+              <label>Prazo<input name="deadline" placeholder="Ex.: novembro/2026"></label>
+              <button class="beam-button" data-magnetic type="submit">Enviar briefing</button><p data-briefing-status role="status"></p>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="experience-section footer-v3" data-experience-section data-scene="main" data-camera-track="footer-camera" data-post-profile="footer" data-controller="FooterSection">
+      <div class="experience-sticky footer-stage">
+        <div class="footer-word" aria-hidden="true">MENSAGEM</div>
+        <div class="footer-content"><p class="eyebrow">END OF SCROLL / START OF PROJECT</p><h2>Se a ideia precisa de movimento,<br>ela precisa de sistema.</h2><div><a class="beam-button" data-magnetic href="#quote">Solicitar orçamento</a><a class="text-link" href="#projects">Rever projetos ↑</a></div></div>
+        <div class="footer-meta"><span>HTML5 · TYPESCRIPT · THREE.JS · PDF.JS</span><span>IMMERSIVE PORTFOLIO V4</span></div>
+      </div>
+    </footer>
+  </main>
+
+  <aside class="chatbot" data-chatbot>
+    <button class="chat-fab beam-button" data-magnetic data-chat-open aria-expanded="false" aria-controls="chat-panel">Falar com o Studio</button>
+    <section class="chat-panel" id="chat-panel" data-chat-panel hidden aria-label="Chat do portfólio"><header><strong>Mensagem Studio</strong><button class="icon-button" data-chat-close aria-label="Fechar chat">×</button></header><div class="chat-log" data-chat-log aria-live="polite"><p class="chat-message assistant">Olá. Posso orientar sobre serviços, orçamento e briefing.</p></div><form data-chat-form><label class="sr-only" for="chat-message">Mensagem</label><input id="chat-message" name="message" autocomplete="off" placeholder="Escreva sua dúvida…" required><button type="submit">Enviar</button></form><a class="whatsapp-link" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Continuar no WhatsApp</a></section>
+  </aside>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+PACKAGE_SIZE=521853283
+PACKAGE_SHA256=795fd3a245302a584fd37402decafec64f10315eacf591ff28d54db99f420870
+ZIP_ENTRIES=1382
+TOP_LEVEL=EMS3
+KEY EMS3/static/admin.css bytes=361396 sha256=7d758cd54e4ce3153843f9d28056fbb8cd1acf3add79ef01f73864a2194d69a3
+  TOKEN UI-002=1
+  TOKEN UI-003=1
+  TOKEN UI-004=1
+  TOKEN UI-006=1
+  TOKEN site-tree-sidebar=36
+  TOKEN sidebar-drawer-open=13
+KEY EMS3/static/admin.js bytes=1137129 sha256=769dca90ad1e250f40fd559371e07af5838bed4021e21bef55560cdb983d8c89
+  TOKEN site-tree-sidebar=1
+  TOKEN sidebar-drawer-open=15
+  TOKEN site_builder.hero.gsap_scroll=1
+  TOKEN pdf=53
+  TOKEN html5=34
+  TOKEN studio.model=5
+KEY EMS3/templates/admin.html bytes=218517 sha256=d8d3a3ff9044a96392be21a900df0406e23e77faed8df78c0bf997e637c3cbc1
+  TOKEN site-tree-sidebar=1
+  TOKEN site_builder.hero.gsap_scroll=1
+  TOKEN pdf=11
+  TOKEN html5=8
+  TOKEN studio.model=3
+KEY EMS3/public_assets/site.js bytes=584404 sha256=957c2c9618e92771087c45fa00ee193e296fdc565ab8a0940806a017e9d894ab
+  TOKEN setupHeroGsapScroll=5
+  TOKEN site_builder.hero.gsap_scroll=1
+  TOKEN pdf=45
+  TOKEN html5=18
+  TOKEN studio.model=2
+KEY EMS3/templates/pages/home.html bytes=1983 sha256=d182cbc72f96c6905f60e705b8429d34514f9dc865d86a6fd13f026c3517b9a2
+KEY EMS3/templates/sections/home_hero.html bytes=832 sha256=bba042edb1300e0a12ff72d11ff3605db34a9e2918bfea80afc9a396ea8f1e58
+  TOKEN data-experience-section=1
+KEY EMS3/app/exporter.py bytes=173488 sha256=ad96d8242d58a73583ba3f453d1d180e462e46f33b3ea1b7e9e4599bbef1f001
+  TOKEN pdf=32
+  TOKEN studio.model=1
+KEY EMS3/app/state_v6.py bytes=69044 sha256=d95672469d59cc519b4871b9403c3cc0c388a5ba2259d42a52f32977f58ab7d4
+REF V4.zip bytes=2307896 sha256=52605cefa45f5ef35156d0f7fffc55471c14b619fd0a6a0985a7669a7388e375
+REF hero.mp4 bytes=3840192 sha256=77a8fb1065c3ecd12272dcbe37dd16cf9e6787bd405c86c025430aefb460b6c1
+REF showcase.pdf bytes=1832186 sha256=7bf7518b793ccef5089e317f740d7076d1b3dfe91e2f8c3f00e131e159d34969
+V4_ENTRIES=174
+V4_TOP_LEVEL=MENSAGEM_IMMERSIVE_WEB_STARTER_V4
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/RELEASE_MANIFEST.json
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/servicos/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/V4_RELEASE_MANIFEST.json
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/public/assets/v4-fallback.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/package.json
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/briefing/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/sections/HeroSection.ts
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/engines/scroll/HeroScrollScene.ts
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/engines/three/Hero3DScene.ts
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/v4.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/v2.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/v3.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/components.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/motion.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/layout.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/tokens.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/base.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/src/styles/index.css
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/projetos/interactive-case/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/projetos/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/projetos/brand-guidelines/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/projetos/motion-system/index.html
+V4_FILE MENSAGEM_IMMERSIVE_WEB_STARTER_V4/projetos/3d-identity/index.html

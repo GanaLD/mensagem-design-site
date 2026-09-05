@@ -1,0 +1,101 @@
+{
+  "release": "MENSAGEM_IMMERSIVE_WEB_STARTER_V4",
+  "version": "4.0.0",
+  "createdAt": "2026-09-04",
+  "fileCount": 126,
+  "critical": {
+    "index.html": {
+      "sha256": "59e3b2779aac5a164738ccfbd7a8ed5df68d3b924bdeda51f4b2c895a8123483",
+      "bytes": 20005
+    },
+    "DEMO_AUTONOMO_V4.html": {
+      "sha256": "4e770359c6b22c4a2ab79e8fae4d7108b95600b2692b8c60ab8320f6f0726fbf",
+      "bytes": 32113
+    },
+    "src/content/projects.json": {
+      "sha256": "4e9d85b04109e311a322770bbba5deddc37c20b8ebcd973c6d970e46c51b2832",
+      "bytes": 7301
+    },
+    "src/content/services.json": {
+      "sha256": "82fe63f28fa8f0c440b541b5188d9f955af1d7375f0307d629fffb4fd53bfb2e",
+      "bytes": 1844
+    },
+    "src/projects/ProjectGridRenderer.ts": {
+      "sha256": "30baec243d5caeb099de3d9db15ae9921a2e179b568f00c432f675c9176f0cc0",
+      "bytes": 3092
+    },
+    "src/projects/ProjectPageRenderer.ts": {
+      "sha256": "ef9940f8d79dc66377013742b4aadaf5eaa0a24bdee43bb81382aaf2b2d3cd00",
+      "bytes": 5846
+    },
+    "src/engines/pdf/PdfShowcase.ts": {
+      "sha256": "d5c7d0fe6ee69228f5db1844799ff85c593382def93c970345ed7c22e6de3b6f",
+      "bytes": 5521
+    },
+    "src/app/AppKernel.ts": {
+      "sha256": "ee9025bd5ee4d5655152a9b6053419baa0c8914e6341ad81a4affda46d6105b2",
+      "bytes": 4729
+    },
+    "src/runtime/ExperienceEngine.ts": {
+      "sha256": "75125aa6078cc09e30ce43874f84c5ecd401fabbeff44c7bfa8a040139a40095",
+      "bytes": 6989
+    },
+    "src/runtime/ScrollOrchestrator.ts": {
+      "sha256": "dbe8ab01c45657b603fc35fe6a3e06ae2c11b06301fc971397757cb6472cc599",
+      "bytes": 4197
+    },
+    "src/three/SceneManager.ts": {
+      "sha256": "f2067fae883b9f5849ce11bf1224343b3b1c3dbae865e587c91878a193534f15",
+      "bytes": 9875
+    },
+    "V4_TEST_REPORT.md": {
+      "sha256": "407dbfbfe41e8326f7cc0df89110945e8f713c153c413d480d69b3e2267acc8f",
+      "bytes": 1055
+    }
+  },
+  "content": {
+    "projects": 4,
+    "services": 5,
+    "projectModuleTypes": [
+      "image",
+      "video",
+      "three",
+      "pdf",
+      "html5",
+      "text"
+    ],
+    "routes": [
+      "/",
+      "/projetos/",
+      "/projetos/motion-system/",
+      "/projetos/3d-identity/",
+      "/projetos/brand-guidelines/",
+      "/projetos/interactive-case/",
+      "/servicos/",
+      "/briefing/"
+    ]
+  },
+  "gates": {
+    "architectureAudit": "PASS",
+    "demoAudit": "PASS",
+    "v4Audit": "PASS",
+    "inlineDemoJavaScriptSyntax": "PASS",
+    "nodeServerSyntax": "PASS",
+    "typescriptSyntaxTranspilation": "PASS_53_FILES",
+    "httpRouteSmoke": "PASS",
+    "npmInstall": "BLOCKED_TIMEOUT",
+    "semanticTypecheck": "NOT_CERTIFIED_NO_NODE_MODULES",
+    "viteBuild": "NOT_CERTIFIED",
+    "headlessVisualScreenshot": "BLOCKED_CHROMIUM_TIMEOUT"
+  },
+  "contracts": {
+    "oneFrameLoop": "PRESERVED",
+    "oneScrollClock": "PRESERVED",
+    "projectRegistryCanonical": "PASS",
+    "serviceRegistryCanonical": "PASS",
+    "mediaCoordinator": "PRESERVED",
+    "quoteBriefingSeparation": "PRESERVED",
+    "procedural3DVisualProof": "PRESERVED",
+    "progressiveProjectFallback": "ADDED"
+  }
+}
